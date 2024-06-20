@@ -273,7 +273,15 @@ fix_dns() {
 
     sed -i '/nameserver/d' $DNS_PATH
     echo 'nameserver 8.8.8.8' >>$DNS_PATH
+    echo 'nameserver 1.1.1.1' >>$DNS_PATH
+    echo 'nameserver 4.2.2.3' >>$DNS_PATH
+    echo 'nameserver 9.9.9.9' >>$DNS_PATH
+    echo 'nameserver 1.0.0.1' >>$DNS_PATH
     echo 'nameserver 8.8.4.4' >>$DNS_PATH
+    echo 'nameserver 2001:4860:4860::8888' >>$DNS_PATH
+    echo 'nameserver 2001:4860:4860::8844' >>$DNS_PATH
+    echo 'nameserver 2606:4700:4700::1111' >>$DNS_PATH
+    echo 'nameserver 2606:4700:4700::1001' >>$DNS_PATH
     spin & SPIN_PID=$!
 
     wait $SPIN_PID
